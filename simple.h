@@ -15,11 +15,11 @@
 #define EXIT -3
 
 /* Global environemnt */
-/*char **environ;
+/* char **environ; */
 /* Global program name */
-/*char *name;
+/* char *name; */
 /* Global history counter */
-/*int hist;
+/* int hist; */
 
 /**
  * struct list_s - A new struct type defining a linked list.
