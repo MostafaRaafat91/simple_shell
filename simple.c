@@ -87,7 +87,6 @@ int main(int argc, char *argv[])
 	int *exe_ret = &retn;
 	char *prompt = "$ ", *new_line = "\n";
 
-
 	name = argv[0];
 	hist = 1;
 	aliases = NULL;
