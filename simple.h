@@ -69,29 +69,29 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char **_strtok(char *line, char *delim);
 char *get_location(char *command);
 
-/* file: locate.c */
+/* file: simpleloc.c */
 list_t *get_path_dir(char *path);
 int execute(char **args, char **front);
 void free_list(list_t *head);
 char *_itoa(int num);
 
 /* Input Helpers */
-/* file: helper_2.c */
+/* file: simplehelp2.c */
 void handle_line(char **line, ssize_t read);
 char **replace_aliases(char **args);
 
-/* file: input_helpers.c */
+/* file: simpleinhelper.c */
 char *get_args(char *line, int *exe_ret);
 int call_args(char **args, char **front, int *exe_ret);
 int run_args(char **args, char **front, int *exe_ret);
 int handle_args(int *exe_ret);
 int check_args(char **args);
 
-/* file: helper.c */
+/* file: simplehelp.c */
 void free_args(char **args, char **front);
 void variable_replacement(char **args, int *exe_ret);
 
-/* String functions - file: str_func1 & str_func2 */
+/* String functions - file: simple_fstr1 & simple_fstr2 */
 int _strlen(const char *s);
 char *_strcat(char *dest, const char *src);
 char *_strncat(char *dest, const char *src, size_t n);
@@ -101,11 +101,11 @@ int _strspn(char *s, char *accept);
 int _strcmp(char *s1, char *s2);
 int _strncmp(const char *s1, const char *s2, size_t n);
 
-/* Builtins - file: initial_builtin.c */
+/* Builtins - file: simplebulit.c */
 int (*get_builtin(char *command))(char **args, char **front);
 int shellby_exit(char **args, char **front);
 int shellby_cd(char **args, char __attribute__((__unused__)) **front);
-/* file: builtin.c */
+/* file: simplebulit.c */
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
 int shellby_help(char **args, char __attribute__((__unused__)) **front);
 
@@ -132,7 +132,7 @@ char *error_2_syntax(char **args);
 char *error_126(char **args);
 char *error_127(char **args);
 
-/* Linkedlist Helpers - file: linkedlist.c */
+/* Linkedlist Helpers - file: simplelist.c */
 alias_t *add_alias_end(alias_t **head, char *name, char *value);
 void free_alias_list(alias_t *head);
 list_t *add_node_end(list_t **head, char *dir);
