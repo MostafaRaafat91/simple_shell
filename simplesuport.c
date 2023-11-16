@@ -41,13 +41,13 @@ char *get_pid(void)
 		perror("Cant read file");
 		return (NULL);
 	}
-	buffer = malloc(120);
+	buffer = malloc(BUFSIZ);
 	if (!buffer)
 	{
 		close(file);
 		return (NULL);
 	}
-	read(file, buffer, 120);
+	read(file, buffer, BUFSIZ);
 	while (buffer[i] != ' ')
 		i++;
 	buffer[i] = '\0';
