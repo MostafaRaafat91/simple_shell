@@ -51,7 +51,7 @@ int shellby_exit(char **args, char **front)
 	int i, len_of_int = 10;
 	unsigned int num = 0, max = 1 << (sizeof(int) * 8 - 1);
 
-	i = 0;gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+	i = 0;
 	if (args[0])
 	{
 		if (args[0][0] == '+')
